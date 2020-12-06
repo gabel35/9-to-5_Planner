@@ -135,7 +135,7 @@
     <script>
       console.log(currentDay);
       console.log(dayjs().format());
-      currentDay = dayjs().format(`dddd +", "+MMMM + " " + DD + ", " + YYYY` );
+      currentDay = dayjs().format(`dddd, MMMM DD, YYYY @HH:mm`);
       console.log(currentDay);
       document.getElementById("currentDay").innerHTML = currentDay
 
