@@ -35,7 +35,7 @@
           <p>9am</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -46,7 +46,7 @@
           <p>10am</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -57,7 +57,7 @@
           <p>11am</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -68,7 +68,7 @@
           <p>12pm</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -79,7 +79,7 @@
           <p>1pm</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -90,7 +90,7 @@
           <p>2pm</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -101,7 +101,7 @@
           <p>3pm</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -112,7 +112,7 @@
           <p>4pm</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
@@ -123,23 +123,26 @@
           <p>5pm</p>
         </div>
         <div class="col-8">
-          <input></input>
+          <input class="inputBox"></input>
         </div>
         <div class="col-1">
           <a>save</a>
         </div>
       </div>
     </div>
-
+    
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script>
       var currentDay = document.getElementById("currentDay");
       console.log(currentDay);
 
-      currentDay = DateTime.local();
-      console.log(now);
+      console.log(dayjs().format());
+      currentDay = dayjs().format();
+      console.log(currentDay);
+
+
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
