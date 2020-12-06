@@ -133,11 +133,13 @@
     
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script>
-      var currentDay = document.getElementById("currentDay");
       console.log(currentDay);
       console.log(dayjs().format());
-      currentDay = dayjs().format();
+      currentDay = dayjs().format(`dddd +", "+MMMM + " " + DD + ", " + YYYY` );
       console.log(currentDay);
+      document.getElementById("currentDay").innerHTML = currentDay
+
+  
 
 
     </script>
