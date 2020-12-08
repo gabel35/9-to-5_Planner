@@ -30,7 +30,7 @@
     </header>
     <div class="container container-sm container-md container-lg container-xl">
       <!-- Timeblocks go here -->
-      <div class="row">
+      <div class="row" id="9">
         <div class="hour col-1">
           <p>9am</p>
         </div>
@@ -41,7 +41,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="10">
         <div class="hour col-1">
           <p>10am</p>
         </div>
@@ -52,7 +52,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="11">
         <div class="hour col-1">
           <p>11am</p>
         </div>
@@ -63,7 +63,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="12">
         <div class="hour col-1">
           <p>12pm</p>
         </div>
@@ -74,7 +74,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="13">
         <div class="hour col-1">
           <p>1pm</p>
         </div>
@@ -85,7 +85,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="14">
         <div class="hour col-1">
           <p>2pm</p>
         </div>
@@ -96,7 +96,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="15">
         <div class="hour col-1">
           <p>3pm</p>
         </div>
@@ -107,7 +107,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="16">
         <div class="hour col-1">
           <p>4pm</p>
         </div>
@@ -118,7 +118,7 @@
           <button class="saveBtn">save</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="17">
         <div class="hour col-1">
           <p>5pm</p>
         </div>
@@ -138,6 +138,17 @@
       currentDay = dayjs().format(`dddd, MMMM DD, YYYY @HH:mm`);
       console.log(currentDay);
       document.getElementById("currentDay").innerHTML = currentDay
+      console.log(dayjs().hour());
+      currentHour = dayjs().hour();
+      console.log(currentHour);
+
+      var hourRows = document.getElementsByClassName("row");
+
+
+      if(currentHour === 18) {
+        alert("yes!");
+      };
+      
 
   
 
