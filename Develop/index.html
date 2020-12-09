@@ -30,104 +30,50 @@
     </header>
     <div class="container container-sm container-md container-lg container-xl">
       <!-- Timeblocks go here -->
-      <div class="row" id="9">
-        <div class="hour col-1">
-          <p>9am</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="9" dataHour=9>
+        <p class="hour col-1" >9am</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="10">
-        <div class="hour col-1">
-          <p>10am</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="10" dataHour=10>
+        <p class="hour col-1" >10am</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="11">
-        <div class="hour col-1">
-          <p>11am</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="11" dataHour=11>
+        <p class="hour col-1">11am</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="12">
-        <div class="hour col-1">
-          <p>12pm</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="12">
+        <p class="hour col-1">12pm</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="13">
-        <div class="hour col-1">
-          <p>1pm</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="13">
+        <p class="hour col-1">1pm</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="14">
-        <div class="hour col-1">
-          <p>2pm</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="14">
+        <p class="hour col-1">2pm</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="15">
-        <div class="hour col-1">
-          <p>3pm</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="15">
+        <p class="hour col-1">3pm</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="16">
-        <div class="hour col-1">
-          <p>4pm</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="16">
+        <p class="hour col-1">4pm</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
-      <div class="row" id="17">
-        <div class="hour col-1">
-          <p>5pm</p>
-        </div>
-        <div class="time-block col-10">
-          <input class=""></input>
-        </div>
-        <div class="saveBtn col-1">
-          <button class="saveBtn">save</button>
-        </div>
+      <div class="row time-block" id="17">
+        <p class="hour col-1">5pm</p>
+        <textarea class="col-10 description" name="textarea"></textarea>
+        <button class="btn col-1 saveBtn">save</button>
       </div>
     </div>
     
@@ -138,29 +84,40 @@
     <script>
       console.log(currentDay);
       console.log(dayjs().format());
-      currentDay = dayjs().format(`dddd, MMMM DD, YYYY @HH:mm`);
+      currentDay = dayjs().format(`dddd, MMMM DD, YYYY`);
       console.log(currentDay);
       document.getElementById("currentDay").innerHTML = currentDay
       console.log(dayjs().hour());
       currentHour = dayjs().hour();
       console.log(currentHour);
 
+      var everyHour = parseInt($(this).attr("dataHour"))
+      console.log("everyHour", everyHour);
       var no9 = document.getElementById("9");
       var no10 = document.getElementById("10");
       var no11 = document.getElementById("11");
+      // var hourNow = parseInt($(this).attr("data-hour"))
+      // $(".hour").each(function(){
+      //   if(hourNow <= currentHour){
+      //     $(this).addClass("past")
+      //   }else if(hourNow === currentHour){
+      //     $(this).addClass("present")
+      //   }
+      // })
 
-
-      if(currentHour === 20) {
+      if(currentHour === 22) {
         no9.classList.add("present");
       }
-      if(currentHour <= 20) {
+      if(currentHour <= 22) {
         no10.classList.add("past");
       }
-      if(currentHour >= 20) {
+      if(currentHour >= 22) {
         no11.classList.add("future");
       }
- 
-      
+      var textarea = $(textarea)
+      $("button").on("click", function() {
+        localStorage.setItem("textarea", (textarea.val))
+      })
 
   
 
