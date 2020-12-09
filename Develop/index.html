@@ -30,7 +30,7 @@
     </header>
     <div class="container container-sm container-md container-lg container-xl">
       <!-- Timeblocks go here -->
-      <div class="row time-block" id="9" dataHour=9>
+      <div class="row time-block" id="9" data-hour=9>
         <p class="hour col-1" >9am</p>
         <textarea class="col-10 description" name="textarea"></textarea>
         <button class="btn col-1 saveBtn">save</button>
@@ -82,20 +82,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script>
+     //finding variables from dayjs API to give local time and date
       console.log(currentDay);
       console.log(dayjs().format());
+     //declaring a new variable with the local date variable from the API in a format (week day, month, date, year)
       currentDay = dayjs().format(`dddd, MMMM DD, YYYY`);
       console.log(currentDay);
+     //displaying the local date in the header
       document.getElementById("currentDay").innerHTML = currentDay
+     //isolating the current hour from the API variable and declaring that as a new variable
       console.log(dayjs().hour());
       currentHour = dayjs().hour();
       console.log(currentHour);
 
-      var everyHour = parseInt($(this).attr("dataHour"))
-      console.log("everyHour", everyHour);
+      // var everyHour = parseInt($(this).attr("dataHour"))
+      // console.log("everyHour", everyHour);
       var no9 = document.getElementById("9");
       var no10 = document.getElementById("10");
       var no11 = document.getElementById("11");
+      var no12 = document.getElementById("12");
+      var no13 = document.getElementById("13");
+      var no14 = document.getElementById("14");
+      var no15 = document.getElementById("15");
+      var no16 = document.getElementById("16");
+      var no17 = document.getElementById("17");
+
+
       // var hourNow = parseInt($(this).attr("data-hour"))
       // $(".hour").each(function(){
       //   if(hourNow <= currentHour){
@@ -105,15 +117,107 @@
       //   }
       // })
 
-      if(currentHour === 22) {
-        no9.classList.add("present");
+      //   var i = [no9, no10, no11, no12, no13, no14, no15, no16, no17]
+
+      function colorHours (){
+        var t = [9,10,11,12,13,14,15,16,17]
+        for (var i=0; i<t.length;i++){
+          if(9 === t) {
+            no[t].classList.add("present");
+          }
+          else if(9 <= t) {
+            no[t].classList.add("past");
+          }
+          else {
+            no[t].classList.add("future");
+          }
+        }
       }
-      if(currentHour <= 22) {
-        no10.classList.add("past");
-      }
-      if(currentHour >= 22) {
-        no11.classList.add("future");
-      }
+      //   if(currentHour === 10) {
+      //     no10.classList.add("present");
+      //   }
+      //   else if(currentHour <= 10) {
+      //     no10.classList.add("past");
+      //   }
+      //   else{
+      //     no10.classList.add("future");
+      //   }
+
+      //   //
+      //   if(currentHour === 11) {
+      //     no11.classList.add("present");
+      //   }
+      //   else if(currentHour <= 11) {
+      //     no11.classList.add("past");
+      //   }
+      //   else{
+      //     no11.classList.add("future");
+      //   }
+
+      //   //
+      //   if(currentHour === 12) {
+      //     no12.classList.add("present");
+      //   }
+      //   else if(currentHour <= 12) {
+      //     no12.classList.add("past");
+      //   }
+      //   else{
+      //     no12.classList.add("future");
+      //   }
+
+      //   //
+      //   if(currentHour === 13) {
+      //     no13.classList.add("present");
+      //   }
+      //   else if(currentHour <= 13) {
+      //     no13.classList.add("past");
+      //   }
+      //   else{
+      //     no13.classList.add("future");
+      //   }
+
+      //   //
+      //   if(currentHour === 14) {
+      //     no14.classList.add("present");
+      //   }
+      //   else if(currentHour <= 14) {
+      //     no14.classList.add("past");
+      //   }
+      //   else{
+      //     no14.classList.add("future");
+      //   }
+
+      //   if(currentHour === 15) {
+      //     no15.classList.add("present");
+      //   }
+      //   else if(currentHour <= 15) {
+      //     no15.classList.add("past");
+      //   }
+      //   else{
+      //     no15.classList.add("future");
+      //   }
+
+      //   if(currentHour === 16) {
+      //     no16.classList.add("present");
+      //   }
+      //   else if(currentHour <= 16) {
+      //     no16.classList.add("past");
+      //   }
+      //   else{
+      //     no16.classList.add("future");
+      //   }
+
+      //   if(currentHour === 17) {
+      //     no17.classList.add("present");
+      //   }
+      //   else if(currentHour <= 17) {
+      //     no17.classList.add("past");
+      //   }
+      //   else{
+      //     no17.classList.add("future");
+      //   }
+
+
       var textarea = $(textarea)
       $("button").on("click", function() {
         localStorage.setItem("textarea", (textarea.val))
