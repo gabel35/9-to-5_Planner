@@ -32,48 +32,48 @@
       <!-- Timeblocks go here -->
       <div class="row time-block" id="9" data-hour=9>
         <div class="hour col-1" >9am</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text9"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn9"></button>
       </div>
       <div class="row time-block" id="10" dataHour=10>
         <div class="hour col-1" >10am</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text10"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn10"></button>
       </div>
       <div class="row time-block" id="11" dataHour=11>
         <div class="hour col-1">11am</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text11"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn11"></button>
       </div>
       <div class="row time-block" id="12">
         <div class="hour col-1">12pm</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text12"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn12"></button>
       </div>
       <div class="row time-block" id="13">
         <div class="hour col-1">1pm</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text13"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn13"></button>
       </div>
       <div class="row time-block" id="14">
         <div class="hour col-1">2pm</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text14"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn14"></button>
       </div>
       <div class="row time-block" id="15">
         <div class="hour col-1">3pm</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text15"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn15"></button>
       </div>
       <div class="row time-block" id="16">
         <div class="hour col-1">4pm</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text16"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn16"></button>
       </div>
       <div class="row time-block" id="17">
         <div class="hour col-1">5pm</div>
-        <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn fas fa-save"></button>
+        <textarea class="col-10 description" id="text17"></textarea>
+        <button class="btn col-1 saveBtn fas fa-save" id="btn17"></button>
       </div>
       <footer> </footer>
     </div>
@@ -96,8 +96,7 @@
       currentHour = dayjs().hour();
       console.log(currentHour);
 
-      // var everyHour = parseInt($(this).attr("dataHour"))
-      // console.log("everyHour", everyHour);
+
       var no9 = document.getElementById("9");
       var no10 = document.getElementById("10");
       var no11 = document.getElementById("11");
@@ -108,7 +107,9 @@
       var no16 = document.getElementById("16");
       var no17 = document.getElementById("17");
 
-
+    //Attempts to loopchanging colors for the time slots
+      // var everyHour = parseInt($(this).attr("dataHour"))
+      // console.log("everyHour", everyHour);
       // var hourNow = parseInt($(this).attr("data-hour"))
       // $(".hour").each(function(){
       //   if(hourNow <= currentHour){
@@ -136,19 +137,20 @@
       //   }
       // }
 
+      //9am
       if(currentHour === 9) {
           no9.classList.add("present");
-        }
+      }
         else if(currentHour >= 9) {
           no9.classList.add("past");
         }
         else{
           no9.classList.add("future");
         }
-      //
-        if(currentHour === 10) {
+      //10am
+      if(currentHour === 10) {
           no10.classList.add("present");
-        }
+      }
         else if(currentHour >= 10) {
           no10.classList.add("past");
         }
@@ -156,10 +158,10 @@
           no10.classList.add("future");
         }
 
-        //
-        if(currentHour === 11) {
+      //11am
+      if(currentHour === 11) {
           no11.classList.add("present");
-        }
+      }
         else if(currentHour >= 11) {
           no11.classList.add("past");
         }
@@ -167,10 +169,10 @@
           no11.classList.add("future");
         }
 
-        //
-        if(currentHour === 12) {
+      //12pm
+      if(currentHour === 12) {
           no12.classList.add("present");
-        }
+      }
         else if(currentHour >= 12) {
           no12.classList.add("past");
         }
@@ -178,10 +180,10 @@
           no12.classList.add("future");
         }
 
-        //
-        if(currentHour === 13) {
+      //1pm
+      if(currentHour === 13) {
           no13.classList.add("present");
-        }
+      }
         else if(currentHour >= 13) {
           no13.classList.add("past");
         }
@@ -189,40 +191,40 @@
           no13.classList.add("future");
         }
 
-        //
-        if(currentHour === 14) {
+      //2pm
+      if(currentHour === 14) {
           no14.classList.add("present");
-        }
+      }
         else if(currentHour >= 14) {
           no14.classList.add("past");
         }
         else{
           no14.classList.add("future");
         }
-
-        if(currentHour === 15) {
+      //3pm
+      if(currentHour === 15) {
           no15.classList.add("present");
-        }
+      }
         else if(currentHour >= 15) {
           no15.classList.add("past");
         }
         else{
           no15.classList.add("future");
         }
-
-        if(currentHour === 16) {
+      //4pm
+      if(currentHour === 16) {
           no16.classList.add("present");
-        }
+      }
         else if(currentHour >= 16) {
           no16.classList.add("past");
         }
         else{
           no16.classList.add("future");
         }
-
-        if(currentHour === 17) {
+      //5pm
+      if(currentHour === 17) {
           no17.classList.add("present");
-        }
+      }
         else if(currentHour >= 17) {
           no17.classList.add("past");
         }
@@ -230,15 +232,36 @@
           no17.classList.add("future");
         }
 
+      var text9 = document.getElementById("text9");
+      var text10 = document.getElementById("text10");
+      var text11 = document.getElementById("text11");
+      var text12 = document.getElementById("text12");
+      var text13 = document.getElementById("text13");
+      var text14 = document.getElementById("text14");
+      var text15 = document.getElementById("text15");
+      var text16 = document.getElementById("text16");
+      var text17 = document.getElementById("text17");
+      
+      
 
-      var textarea = $(textarea)
-      $("button").on("click", function() {
-        localStorage.setItem("textarea", (textarea.val))
-      })
+      document.getElementById("btn9").addEventListener("click", function(){
+        console.log(text9.value);
+        alert(text9.value);
+        localStorage.setItem("task9am", text9.value);
+      })  
+      function displayTask9am(){
+        var task9am = localStorage.getItem("task9am");
+        text9.value  = task9am
+      }
+      displayTask9am ()
+
+      //attempt at using jquery for local storage
+        // var textarea = $(textarea)
+        // $("button").on("click", function() {
+        //   localStorage.setItem("textarea", (textarea.val))
+        // })
 
   
-
-
     </script>
 
   </body>
