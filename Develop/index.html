@@ -31,50 +31,51 @@
     <div class="container container-sm container-md container-lg container-xl">
       <!-- Timeblocks go here -->
       <div class="row time-block" id="9" data-hour=9>
-        <p class="hour col-1" >9am</p>
+        <div class="hour col-1" >9am</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="10" dataHour=10>
-        <p class="hour col-1" >10am</p>
+        <div class="hour col-1" >10am</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="11" dataHour=11>
-        <p class="hour col-1">11am</p>
+        <div class="hour col-1">11am</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="12">
-        <p class="hour col-1">12pm</p>
+        <div class="hour col-1">12pm</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="13">
-        <p class="hour col-1">1pm</p>
+        <div class="hour col-1">1pm</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="14">
-        <p class="hour col-1">2pm</p>
+        <div class="hour col-1">2pm</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="15">
-        <p class="hour col-1">3pm</p>
+        <div class="hour col-1">3pm</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="16">
-        <p class="hour col-1">4pm</p>
+        <div class="hour col-1">4pm</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
       <div class="row time-block" id="17">
-        <p class="hour col-1">5pm</p>
+        <div class="hour col-1">5pm</div>
         <textarea class="col-10 description" name="textarea"></textarea>
-        <button class="btn col-1 saveBtn">save</button>
+        <button class="btn col-1 saveBtn fas fa-save"></button>
       </div>
+      <footer> </footer>
     </div>
     
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
@@ -117,105 +118,117 @@
       //   }
       // })
 
-      //   var i = [no9, no10, no11, no12, no13, no14, no15, no16, no17]
+      //  var workHours = [no9, no10, no11, no12, no13, no14, no15, no16, no17]
+      // workHours.forEach(colorHours);
 
-      function colorHours (){
-        var t = [9,10,11,12,13,14,15,16,17]
-        for (var i=0; i<t.length;i++){
-          if(9 === t) {
-            no[t].classList.add("present");
-          }
-          else if(9 <= t) {
-            no[t].classList.add("past");
-          }
-          else {
-            no[t].classList.add("future");
-          }
+      // function colorHours (){
+      //   var t = [9,10,11,12,13,14,15,16,17]
+      //   for (var i=0; i<t.length;i++){
+      //     if(currentHour === t) {
+      //       this.classList.add("present");
+      //     }
+      //     else if(currentHour <= t) {
+      //       this.classList.add("past");
+      //     }
+      //     else {
+      //       this.classList.add("future");
+      //     }
+      //   }
+      // }
+
+      if(currentHour === 9) {
+          no9.classList.add("present");
         }
-      }
-      //   if(currentHour === 10) {
-      //     no10.classList.add("present");
-      //   }
-      //   else if(currentHour <= 10) {
-      //     no10.classList.add("past");
-      //   }
-      //   else{
-      //     no10.classList.add("future");
-      //   }
+        else if(currentHour >= 9) {
+          no9.classList.add("past");
+        }
+        else{
+          no9.classList.add("future");
+        }
+      //
+        if(currentHour === 10) {
+          no10.classList.add("present");
+        }
+        else if(currentHour >= 10) {
+          no10.classList.add("past");
+        }
+        else{
+          no10.classList.add("future");
+        }
 
-      //   //
-      //   if(currentHour === 11) {
-      //     no11.classList.add("present");
-      //   }
-      //   else if(currentHour <= 11) {
-      //     no11.classList.add("past");
-      //   }
-      //   else{
-      //     no11.classList.add("future");
-      //   }
+        //
+        if(currentHour === 11) {
+          no11.classList.add("present");
+        }
+        else if(currentHour >= 11) {
+          no11.classList.add("past");
+        }
+        else{
+          no11.classList.add("future");
+        }
 
-      //   //
-      //   if(currentHour === 12) {
-      //     no12.classList.add("present");
-      //   }
-      //   else if(currentHour <= 12) {
-      //     no12.classList.add("past");
-      //   }
-      //   else{
-      //     no12.classList.add("future");
-      //   }
+        //
+        if(currentHour === 12) {
+          no12.classList.add("present");
+        }
+        else if(currentHour >= 12) {
+          no12.classList.add("past");
+        }
+        else{
+          no12.classList.add("future");
+        }
 
-      //   //
-      //   if(currentHour === 13) {
-      //     no13.classList.add("present");
-      //   }
-      //   else if(currentHour <= 13) {
-      //     no13.classList.add("past");
-      //   }
-      //   else{
-      //     no13.classList.add("future");
-      //   }
+        //
+        if(currentHour === 13) {
+          no13.classList.add("present");
+        }
+        else if(currentHour >= 13) {
+          no13.classList.add("past");
+        }
+        else{
+          no13.classList.add("future");
+        }
 
-      //   //
-      //   if(currentHour === 14) {
-      //     no14.classList.add("present");
-      //   }
-      //   else if(currentHour <= 14) {
-      //     no14.classList.add("past");
-      //   }
-      //   else{
-      //     no14.classList.add("future");
-      //   }
+        //
+        if(currentHour === 14) {
+          no14.classList.add("present");
+        }
+        else if(currentHour >= 14) {
+          no14.classList.add("past");
+        }
+        else{
+          no14.classList.add("future");
+        }
 
-      //   if(currentHour === 15) {
-      //     no15.classList.add("present");
-      //   }
-      //   else if(currentHour <= 15) {
-      //     no15.classList.add("past");
-      //   }
-      //   else{
-      //     no15.classList.add("future");
-      //   }
+        if(currentHour === 15) {
+          no15.classList.add("present");
+        }
+        else if(currentHour >= 15) {
+          no15.classList.add("past");
+        }
+        else{
+          no15.classList.add("future");
+        }
 
-      //   if(currentHour === 16) {
-      //     no16.classList.add("present");
-      //   }
-      //   else if(currentHour <= 16) {
-      //     no16.classList.add("past");
-      //   }
-      //   else{
-      //     no16.classList.add("future");
-      //   }
+        if(currentHour === 16) {
+          no16.classList.add("present");
+        }
+        else if(currentHour >= 16) {
+          no16.classList.add("past");
+        }
+        else{
+          no16.classList.add("future");
+        }
 
-      //   if(currentHour === 17) {
-      //     no17.classList.add("present");
-      //   }
-      //   else if(currentHour <= 17) {
-      //     no17.classList.add("past");
-      //   }
-      //   else{
-      //     no17.classList.add("future");
-      //   }
+        if(currentHour === 17) {
+          no17.classList.add("present");
+        }
+        else if(currentHour >= 17) {
+          no17.classList.add("past");
+        }
+        else{
+          no17.classList.add("future");
+        }
 
 
       var textarea = $(textarea)
