@@ -1,15 +1,6 @@
-//finding variables from dayjs API to give local time and date
- console.log(currentDay);
- console.log(dayjs().format());
-//declaring a new variable with the local date variable from the API in a format (week day, month, date, year)
  currentDay = dayjs().format(`dddd, MMMM DD, YYYY`);
- console.log(currentDay);
-//displaying the local date in the header
  document.getElementById("currentDay").innerHTML = currentDay
-//isolating the current hour from the API variable and declaring that as a new variable
- console.log(dayjs().hour());
  currentHour = dayjs().hour();
- console.log(currentHour);
 
 
  var no9 = document.getElementById("9");
@@ -168,8 +159,6 @@
  
  //9am
  document.getElementById("btn9").addEventListener("click", function(){
-   console.log(text9.value);
-   alert(text9.value);
    localStorage.setItem("9am Task", text9.value);
  })  
  function displayTask9am(){
@@ -180,8 +169,6 @@
 
  //10am
  document.getElementById("btn10").addEventListener("click", function(){
-   console.log(text10.value);
-   alert(text10.value);
    localStorage.setItem("10am Task", text10.value);
  })  
  function displayTask10am(){
@@ -192,8 +179,6 @@
 
  //11am
  document.getElementById("btn11").addEventListener("click", function(){
-   console.log(text11.value);
-   alert(text11.value);
    localStorage.setItem("11am Task", text11.value);
  })  
  function displayTask11am(){
@@ -204,8 +189,6 @@
 
  //12pm
  document.getElementById("btn12").addEventListener("click", function(){
-   console.log(text12.value);
-   alert(text12.value);
    localStorage.setItem("12pm Task", text12.value);
  })  
  function displayTask12pm(){
@@ -216,8 +199,6 @@
 
  //1pm
  document.getElementById("btn13").addEventListener("click", function(){
-   console.log(text13.value);
-   alert(text13.value);
    localStorage.setItem("1pm Task", text13.value);
  })  
  function displayTask1pm(){
@@ -228,8 +209,6 @@
 
   //2pm
   document.getElementById("btn14").addEventListener("click", function(){
-   console.log(text14.value);
-   alert(text14.value);
    localStorage.setItem("2pm Task", text14.value);
  })  
  function displayTask2pm(){
@@ -240,8 +219,6 @@
  
  //3pm
  document.getElementById("btn15").addEventListener("click", function(){
-   console.log(text15.value);
-   alert(text15.value);
    localStorage.setItem("3pm Task", text15.value);
  })  
  function displayTask3pm(){
@@ -252,8 +229,6 @@
 
  //4pm
  document.getElementById("btn16").addEventListener("click", function(){
-   console.log(text16.value);
-   alert(text16.value);
    localStorage.setItem("4pm Task", text16.value);
  })  
  function displayTask4pm(){
@@ -264,8 +239,6 @@
 
  //5pm
  document.getElementById("btn17").addEventListener("click", function(){
-   console.log(text17.value);
-   alert(text17.value);
    localStorage.setItem("5pm Task", text17.value);
  })  
  function displayTask5pm(){
